@@ -1,0 +1,6 @@
+# alias
+alias l='ls -ltr'
+alias c='clear'
+alias f='find . -iname'
+alias p='ps -ef|grep java'
+alias grep='grep --color=always'
