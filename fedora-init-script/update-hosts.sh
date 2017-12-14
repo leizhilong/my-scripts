@@ -1,0 +1,1 @@
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/racaljk/hosts/master/tools/lhosts) -r '1,20'"
