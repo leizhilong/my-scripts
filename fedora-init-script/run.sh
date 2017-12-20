@@ -15,9 +15,9 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 
 # install tools which are usually used in working
 sudo dnf install ctags ack dos2unix cvs svn  \
-	git gitg htop tig  tuxcmd terminator \
-	wireshark telnet httpd \
-	docker golang code \
+	git gitg htop tig zsh tuxcmd terminator \
+	wireshark telnet httpd filezilla \
+	docker golang code pacmanager\
 	fcitx fcitx-configtool fcitx-sunpinyin vim meld \
 	google-chrome-stable thunderbird samba \
 	gcc gcc-c++ expect -y 
