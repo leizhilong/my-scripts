@@ -7,42 +7,42 @@ mkdir -p /etc/yum.repos.d/bak/
 mv /etc/yum.repos.d/*.repo /etc/yum.repos.d/bak/
 cat >> /etc/yum.repos.d/tuna.repo <<EOF
 [fedora]
-name=Fedora $releasever - $basearch
+name=Fedora \$releasever - \$basearch
 failovermethod=priority
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/$releasever/Everything/$basearch/os/
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/\$releasever/Everything/\$basearch/os/
 metadata_expire=28d
 gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-\$releasever-\$basearch
 skip_if_unavailable=False
 
 [updates]
-name=Fedora $releasever - $basearch - Updates
+name=Fedora \$releasever - \$basearch - Updates
 failovermethod=priority
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/fedora/updates/$releasever/Everything/$basearch/
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/fedora/updates/\$releasever/Everything/\$basearch/
 enabled=1
 gpgcheck=1
 metadata_expire=6h
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-\$releasever-\$basearch
 skip_if_unavailable=False
 
 [fedora-modular]
-name=Fedora Modular $releasever - $basearch
+name=Fedora Modular \$releasever - \$basearch
 failovermethod=priority
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/$releasever/Modular/$basearch/os/
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/\$releasever/Modular/\$basearch/os/
 enabled=1
 metadata_expire=7d
 gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-\$releasever-\$basearch
 skip_if_unavailable=False
 
 [updates-modular]
-name=Fedora Modular $releasever - $basearch - Updates
+name=Fedora Modular \$releasever - \$basearch - Updates
 failovermethod=priority
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/fedora/updates/$releasever/Modular/$basearch/
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/fedora/updates/\$releasever/Modular/\$basearch/
 enabled=1
 gpgcheck=1
 metadata_expire=6h
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-\$releasever-\$basearch
 skip_if_unavailable=False
 EOF
 
@@ -82,7 +82,6 @@ git config --global alias.ci commit
 git config --global alias.st status
 git config --global alias.br branch
 git config --global alias.up "pull --rebase"
-git config branch.master.mergeoptions --ff-only
 
 ###############################################################################
 
