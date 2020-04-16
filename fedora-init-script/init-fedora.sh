@@ -1,5 +1,5 @@
 ##########################install###############################################
-dnf erase libreoffice* qemu* libvirt* -y
+dnf erase libreoffice* qemu* libvirt* cheese rhythmbox gnome-maps gnome-photos -y
 dnf check-update
 dnf update -y
 
